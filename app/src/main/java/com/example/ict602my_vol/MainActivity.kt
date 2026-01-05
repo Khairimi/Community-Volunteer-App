@@ -4,24 +4,19 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ict602my_vol.ui.theme.ICT602MY_VOLTheme
@@ -32,89 +27,93 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ICT602MY_VOLTheme {
-                VolunteerScreen()
+                MainScreen()
             }
         }
     }
 }
 
 @Composable
-fun VolunteerScreen() {
+fun MainScreen() {
     var selectedRole by remember { mutableStateOf("Volunteer") }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF3ABABE))
+            .background(Color.White)
             .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
-        // Admin / Volunteer toggle
+        // Toggle buttons
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center
         ) {
             Button(
-                onClick = { selectedRole = "Admin" },
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = if (selectedRole == "Admin") Color.White else Color(0xFF3ABABE),
-                    contentColor = if (selectedRole == "Admin") Color(0xFF3ABABE) else Color.White
-                ),
-                shape = RoundedCornerShape(16.dp),
-                modifier = Modifier.padding(horizontal = 8.dp)
-            ) {
-                Text("Admin")
-            }
-
-            Button(
                 onClick = { selectedRole = "Volunteer" },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (selectedRole == "Volunteer") Color.White else Color(0xFF3ABABE),
-                    contentColor = if (selectedRole == "Volunteer") Color(0xFF3ABABE) else Color.White
+                    containerColor = if (selectedRole == "Volunteer") Color(0xFF3ABABE) else Color.White,
+                    contentColor = if (selectedRole == "Volunteer") Color.White else Color(0xFF3ABABE)
                 ),
                 shape = RoundedCornerShape(16.dp),
                 modifier = Modifier.padding(horizontal = 8.dp)
             ) {
                 Text("Volunteer")
             }
+
+            Button(
+                onClick = { selectedRole = "Admin" },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = if (selectedRole == "Admin") Color(0xFF3ABABE) else Color.White,
+                    contentColor = if (selectedRole == "Admin") Color.White else Color(0xFF3ABABE)
+                ),
+                shape = RoundedCornerShape(16.dp),
+                modifier = Modifier.padding(horizontal = 8.dp)
+            ) {
+                Text("Admin")
+            }
         }
 
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
-        // Logo placeholder (white text on blue)
-        Box(
-            modifier = Modifier
-                .size(120.dp)
-                .background(Color.White, shape = RoundedCornerShape(16.dp)),
-            contentAlignment = Alignment.Center
-        ) {
-            Text("LOGO", color = Color(0xFF3ABABE), fontWeight = FontWeight.Bold, fontSize = 20.sp)
+        // Display selected screen
+        if (selectedRole == "Volunteer") {
+            VolunteerScreen()
+        } else {
+            AdminScreen()
         }
+    }
+}
+
+@Composable
+fun VolunteerScreen() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.logo_3ababe),
+            contentDescription = "Logo",
+            modifier = Modifier.size(100.dp)
+        )
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Title / subtitle
         Text(
-            if (selectedRole == "Admin") "Admin Sign Up" else "Join as Volunteer",
-            color = Color.White,
+            "Join as Volunteer",
+            color = Color.Black,
             fontSize = 22.sp,
             fontWeight = FontWeight.Bold
         )
-
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            if (selectedRole == "Admin")
-                "Fill in your admin details"
-            else
-                "Fill in your details to start volunteering",
-            color = Color.White,
-            fontSize = 14.sp
+            "Fill in your details to start volunteering",
+            color = Color.Black,
+            fontSize = 14.sp,
+            textAlign = TextAlign.Center
         )
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        // Input fields
         OutlinedTextField(
             value = "",
             onValueChange = {},
@@ -139,7 +138,7 @@ fun VolunteerScreen() {
         Spacer(modifier = Modifier.height(32.dp))
 
         Button(
-            onClick = { /* Handle Sign Up */ },
+            onClick = {},
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(16.dp)
         ) {
@@ -150,19 +149,119 @@ fun VolunteerScreen() {
 
         Text(
             "By clicking Sign Up, you agree to our Terms of Service and Privacy Policy",
-            color = Color.White,
+            color = Color.Gray,
             fontSize = 12.sp,
-            modifier = Modifier.fillMaxWidth(),
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth()
         )
     }
 }
 
+@Composable
+fun AdminScreen() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.logo_3ababe),
+            contentDescription = "Logo",
+            modifier = Modifier.size(100.dp)
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text(
+            "Create an account",
+            color = Color.Black,
+            fontSize = 22.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        Text(
+            "Enter your email to sign up for this app",
+            color = Color.Black,
+            fontSize = 14.sp,
+            textAlign = TextAlign.Center
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+        OutlinedTextField(
+            value = "",
+            onValueChange = {},
+            label = { Text("Email") },
+            placeholder = { Text("example@email.com", color = Color.Gray) },
+            modifier = Modifier.fillMaxWidth()
+        )
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Button(
+            onClick = {},
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(16.dp)
+        ) {
+            Text("Continue")
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+        Text(
+            "----------------- or -----------------",
+            color = Color.Gray,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth()
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            Button(
+                onClick = {},
+                modifier = Modifier.weight(1f),
+                shape = RoundedCornerShape(16.dp)
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.ic_google),
+                    contentDescription = "Google",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text("Google")
+            }
+
+            Button(
+                onClick = {},
+                modifier = Modifier.weight(1f),
+                shape = RoundedCornerShape(16.dp)
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.ic_apple),
+                    contentDescription = "Apple",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text("Apple")
+            }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+        Text(
+            "By clicking continue, you agree to our Terms of Service and Privacy Policy",
+            color = Color.Gray,
+            fontSize = 12.sp,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
+}
+
+
 @Preview(showBackground = true)
 @Composable
-fun VolunteerScreenPreview() {
+fun PreviewMainScreen() {
     ICT602MY_VOLTheme {
-        VolunteerScreen()
+        MainScreen()
     }
 }
 
