@@ -89,25 +89,25 @@
             app:cardBackgroundColor="#3DB7B7">
 
             <LinearLayout
-                android:padding="16dp"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="92dp"
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <TextView
-                    android:text="@string/count_256"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFF"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:text="@string/count_256"
+                    android:textColor="#FFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/users"
                     android:textColor="#FFF"
-                    android:textSize="12sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="12sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -186,17 +186,17 @@
 
     <Button
         android:id="@+id/btnManageEvent"
-        android:text="@string/manage_event"
-        android:backgroundTint="#3DB7B7"
-        android:textColor="#FFF"
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
-        android:layout_height="56dp"/>
+        android:layout_height="125dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#3DB7B7"
+        android:text="@string/manage_event"
+        android:textColor="#FFF" />
 
     <Button
         android:id="@+id/btnViewReport"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="125dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#3DB7B7"
         android:text="@string/view_report"

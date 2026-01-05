@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.admindashboardactivity" >
 
     <application
         android:allowBackup="true"
@@ -9,11 +10,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AdminDashboardActivity">
+        android:theme="@style/Theme.AdminDashboard">
         <activity
             android:name=".AdminDashboardActivity"
             android:exported="true"
-            android:theme="@style/Theme.AdminDashboardActivity">
+            android:theme="@style/Theme.AdminDashboard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
