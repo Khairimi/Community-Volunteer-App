@@ -1,0 +1,114 @@
+[
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/drawable_filter_chip_bg.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/drawable/filter_chip_bg.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/drawable_ic_calendar.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/drawable/ic_calendar.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/drawable_ic_notification.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/drawable/ic_notification.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/layout_item_organizer_circle.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/layout/item_organizer_circle.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/drawable_ic_profile.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/drawable/ic_profile.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/drawable_ic_organizer_placeholder.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/drawable/ic_organizer_placeholder.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/drawable_ic_location.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/drawable/ic_location.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/layout_activity_main.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/layout_item_event_card.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/layout/item_event_card.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/drawable_rounded_search_bg.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/drawable/rounded_search_bg.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/drawable_ic_home.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/xml_backup_rules.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.volunteerfigma.app-pngs-33:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.volunteerfigma.app-debug-37:/drawable_ic_placeholder_image.xml.flat",
+        "source": "com.example.volunteerfigma.app-main-39:/drawable/ic_placeholder_image.xml"
+    }
+]
