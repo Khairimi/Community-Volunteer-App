@@ -10,67 +10,12 @@
           <theme>@style/Theme.VolunteerFigma</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/filter_chip_bg.xml">
-        <config>
-          <theme>@style/Theme.VolunteerFigma</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_calendar.xml">
-        <config>
-          <theme>@style/Theme.VolunteerFigma</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_home.xml">
-        <config>
-          <theme>@style/Theme.VolunteerFigma</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml">
         <config>
           <theme>@style/Theme.VolunteerFigma</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_location.xml">
-        <config>
-          <theme>@style/Theme.VolunteerFigma</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_notification.xml">
-        <config>
-          <theme>@style/Theme.VolunteerFigma</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_organizer_placeholder.xml">
-        <config>
-          <theme>@style/Theme.VolunteerFigma</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_placeholder_image.xml">
-        <config>
-          <theme>@style/Theme.VolunteerFigma</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_profile.xml">
-        <config>
-          <theme>@style/Theme.VolunteerFigma</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/rounded_search_bg.xml">
-        <config>
-          <theme>@style/Theme.VolunteerFigma</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-        <config>
-          <theme>@style/Theme.VolunteerFigma</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_event_card.xml">
-        <config>
-          <theme>@style/Theme.VolunteerFigma</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_organizer_circle.xml">
         <config>
           <theme>@style/Theme.VolunteerFigma</theme>
         </config>
@@ -170,7 +115,7 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "Event",
+    "git-widget-placeholder": "main",
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
