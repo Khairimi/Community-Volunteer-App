@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AdminDashboardActivity</string>
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="info">Info</string>
+    <string name="overview">Overview</string>
+    <string name="count_12">12</string>
+    <string name="total_events_upcoming">Total Events\nUpcoming</string>
+    <string name="count_256">256</string>
+    <string name="users">Users</string>
+    <string name="events">Events</string>
+    <string name="event_details">Name\nDate of the event</string>
+    <string name="count_4">4</string>
+    <string name="pending">Pending</string>
+    <string name="quick_action">Quick Action</string>
+    <string name="manage_event">Manage Event</string>
+    <string name="view_report">View Report</string>
+</resources>
