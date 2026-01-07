@@ -72,6 +72,7 @@ import com.example.eventtest3.PrimaryBackground
 import com.example.eventtest3.ui.theme.EventTest3Theme
 import com.example.eventtest3.OrganizersScreen // Import OrganizersScreen
 import com.example.eventtest3.Organizer
+import com.example.eventtest3.EventsScreen
 
 
 
@@ -114,7 +115,7 @@ fun MainScreen() {
     }
 }
 
-// ===================== HOME SCREEN =====================
+
 // ===================== HOME SCREEN =====================
 @Composable
 fun HomeScreen(padding: PaddingValues) {
@@ -169,6 +170,7 @@ fun HomeScreen(padding: PaddingValues) {
                     .background(Color.White)
             ) {
 
+                // Home Interface
                 // Item 1: Tajuk
                 item { HeaderTitle("Event list") }
 
@@ -186,16 +188,25 @@ fun HomeScreen(padding: PaddingValues) {
                 }
 
                 // Item 4: Tajuk untuk senarai acara
-                item { EventHeader() }
-
-                // Item 5: Senarai Acara (Event) yang boleh diklik
-                items(filteredEvents.withIndex().toList()) { (index, event) ->
-                    EventCard(event) {
-                        // Navigasi ke skrin butiran dengan menghantar index asal
-                        homeNavController.navigate("event_details_screen/$index")
+                item {
+                    EventHeader() {
+                        homeNavController.navigate("events_screen")
                     }
                 }
+
+
+                    // Item 5: Senarai Acara (Event) yang boleh diklik
+                    items(filteredEvents.withIndex().toList()) { (index, event) ->
+                        EventCard(event) {
+                            // Navigasi ke skrin butiran dengan menghantar index asal
+                            homeNavController.navigate("event_details_screen/$index")
+                        }
+
+
+                    }
+
             }
+
         }
 
 
@@ -225,6 +236,23 @@ fun HomeScreen(padding: PaddingValues) {
                     homeNavController.popBackStack()
                 },
                 organizers = organizers
+            )
+        }
+
+        // --- ROUTE 4: EVENT SCREEN  ---
+        composable("events_screen") {
+            EventsScreen(
+                onBackClick = {
+                    homeNavController.popBackStack()
+                },
+                events = events, // Hantar senarai event
+                onEventClick = { clickedEvent ->
+                    // Cari index event yang diklik untuk navigasi ke details screen
+                    val index = events.indexOf(clickedEvent)
+                    if (index != -1) {
+                        homeNavController.navigate("event_details_screen/$index")
+                    }
+                }
             )
         }
     }
@@ -373,11 +401,12 @@ fun OrganizerItem(organizer: Organizer) {
 
 // ===================== EVENT HEADER =====================
 @Composable
-fun EventHeader() {
+fun EventHeader(onClick: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp),
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+            .clickable(onClick = onClick),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
